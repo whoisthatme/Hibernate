@@ -12,6 +12,7 @@ public class UserDaoJDBCImpl implements UserDao {
     public UserDaoJDBCImpl() {
 
     }
+
     Connection connection = Util.getConnection();
 
     public void createUsersTable() {
@@ -71,7 +72,7 @@ public class UserDaoJDBCImpl implements UserDao {
                 String name = resultSet.getString("name");
                 String lastName = resultSet.getString("lastName");
                 byte age = resultSet.getByte("age");
-                userslist.add(new User(id, name, lastName, age));
+               // userslist.add(new User(id, name, lastName, age));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
